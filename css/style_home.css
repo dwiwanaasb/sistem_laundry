@@ -1,0 +1,283 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.socialmedia {
+    padding: 20px 0;
+    background-color: #FFFFFF;
+}
+
+.socialmedia ul li {
+    display: inline-block;
+    color: #1aa0e8;
+    margin-right: 20px;
+}
+
+.address {
+    padding-bottom: 30px;
+}
+
+.address p {
+    color: #393e46;
+    word-spacing: 2px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.container::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+header {
+    background-color: #1aa0e8;
+}
+
+header h2 {
+    float: left;
+    padding: 20px 0px;
+    color: #FFFFFF;
+}
+
+header ul {
+    float: right;
+    color: #FFFFFF;
+}
+
+header ul li {
+    display: inline-block;
+    font-weight: 700;
+}
+
+header ul li a {
+    padding: 25px 20px;
+    display: inline-block;
+}
+
+header ul li a:hover {
+    background-color: #FFFFFF;
+    color: #1aa0e8;
+}
+
+.on {
+    background-color: #FFFFFF;
+    color: #1aa0e8;
+}
+
+.banner {
+    height: 70vh;
+    background-image: url('../img/banner.jpg');
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner::after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(26, 160, 232, 0.3);
+}
+
+.banner .button {
+    font-weight: 800;
+    color: #FFFFFF;
+    z-index: 1;
+    padding: 20px 25px;
+    border: 5px solid #FFFFFF;
+}
+
+.banner .button:hover {
+    background-color: #00416d;
+}
+
+.motto h3 {
+    margin-top: 30px;
+    text-align: center;
+    padding: 30px 0;
+    color: #00416d;
+    margin-bottom: 20px;
+}
+
+.motto {
+    padding-bottom: 100px;
+}
+
+.motto p {
+    color: #393e46;
+    word-spacing: 2px;
+    line-height: 25px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.service {
+    background-color: rgba(26, 160, 232, 0.1);
+}
+
+.service h3 {
+    text-align: center;
+    padding: 50px 0;
+    color: #00416d;
+    margin-bottom: 20px;
+}
+
+.feature {
+    color: #00416d;
+    padding-bottom: 50px;
+}
+
+.feature::after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.feature .column {
+    width: 20%;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: center;
+    float: left;
+    margin-left: 50px;
+}
+
+.feature .column p {
+    color: #393e46;
+    word-spacing: 2px;
+    line-height: 25px;
+    text-align: center;
+}
+
+.feature .column h4 {
+    margin: 20px 0;
+}
+
+.icon {
+    width: 70px;
+    height: 70px;
+    border: 1px solid;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 73px;
+    font-size: 30px;
+    margin: 0 auto;
+    background-color: #FFFFFF;
+}
+
+.gallery li {
+    width: 150px;
+    height: 150px;
+    list-style: none;
+    border: 3px solid #00416d;
+    float: left;
+    margin-left: 52px;
+    position: relative;
+}
+
+.gallery li span {
+    display: block;
+    width: 150px;
+    height: 150px;
+    background-color: rgba(26, 160, 232, .3);
+    position: absolute;
+    top: 0;
+    text-align: center;
+    line-height: 150px;
+    color: #393e46;
+    opacity: 0;
+    transition: .3s;
+}
+
+.gallery li a:hover span {
+    opacity: 1;
+}
+
+.gallery li,
+.gallery li img,
+.gallery li span {
+    border-radius: 50%;
+}
+
+.gallery p {
+    margin-top: 15px;
+    font-weight: 500;
+}
+
+.gallery .overlay img {
+    width: 400px;
+    border-radius: 10px;
+}
+
+.overlay {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0);
+    z-index: 9;
+    transition: .7s;
+    text-align: center;
+    padding: 120px 0;
+}
+
+.overlay:target {
+    width: auto;
+    height: auto;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.overlay img {
+    max-height: 100%;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, .5);
+}
+
+.overlay img,
+.overlay a {
+    margin-top: 20px;
+}
+
+.overlay:target img {
+    animation: zoompicture 1s;
+}
+
+.overlay .closepicture {
+    position: absolute;
+    top: 90px;
+    margin-left: 10px;
+    color: #FFFFFF;
+}
+
+.overlay:target .closepicture {
+    animation: zoompicture 1s forwards;
+}
+
+footer {
+    padding: 30px 0;
+    background-color: #1aa0e8;
+    text-align-last: center;
+    color: #FFFFFF;
+}

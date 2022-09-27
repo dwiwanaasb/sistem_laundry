@@ -1,0 +1,254 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+body {
+    background-color: #e8ebf0;
+}
+
+.container-header {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.container-header::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+header {
+    background-color: #1aa0e8;
+    transition: all 0.5s;
+}
+
+header h2 {
+    float: left;
+    padding-top: 20px;
+    margin-left: 50%;
+    color: #ffffff;
+}
+
+header ul {
+    float: right;
+}
+
+header ul li {
+    display: inline-block;
+}
+
+header ul li a {
+    padding: 25px;
+    display: inline-block;
+    color: #ffffff;
+}
+
+label #btn,
+label #cancel {
+    position: absolute;
+    cursor: pointer;
+    background: #1c2a3a;
+    border-radius: 3px;
+    padding: 5px 7px;
+}
+
+label #btn {
+    left: 35px;
+    top: 25px;
+    font-size-adjust: 35px;
+    color: #ffffff;
+    transition: all 0.5s;
+}
+
+label #cancel {
+    z-index: 111;
+    left: 195px;
+    top: 18px;
+    font-size: 20px;
+    color: #ffffff;
+    transition: all 0.5s;
+}
+
+#check {
+    display: none;
+}
+
+#check:checked~.sidebar {
+    margin-left: -250px;
+}
+
+#check:checked~label #btn {
+    left: 50px;
+}
+
+#check:checked~label #cancel {
+    left: -195px;
+}
+
+#check:checked~.container-search {
+    margin-left: 220px;
+}
+
+#check:checked~header {
+    margin-left: -250px;
+}
+
+#check:checked~.content-table {
+    margin-left: 220px;
+}
+
+.sidebar {
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    background: #1c2a3a;
+    transition: all 0.5s ease;
+}
+
+.sidebar header {
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+    line-height: 65px;
+    background: #1c2a3a;
+    user-select: none;
+    padding-bottom: 3px;
+}
+
+.sidebar ul li a {
+    height: 100%;
+    width: 100%;
+    line-height: 60px;
+    font-size: 15px;
+    color: #ffffff;
+    padding-left: 40px;
+    transition: 0.4s;
+}
+
+ul li:hover a {
+    padding-left: 50px;
+}
+
+.sidebar ul a i {
+    margin-right: 15px;
+}
+
+.on {
+    background-color: #3a5260;
+}
+
+.container-search {
+    display: flex;
+    margin-top: 100px;
+    margin-left: 350px;
+    transition: all 0.5s;
+}
+
+.container-search input {
+    outline: none;
+    border: 1px solid #b0cac7;
+    font-size: 15px;
+    padding: 5px 7px;
+    transition: all 0.5s;
+    border-radius: 5px;
+    width: 250px;
+}
+
+.container-search input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+.container-search input:focus {
+    border: 1px solid #158467;
+    box-shadow: 0px 1px 6px #158467;
+}
+
+.container-search button {
+    border: none;
+    outline: none;
+    transition: all 0.5s;
+    background: #158467;
+    padding: 10px 17px;
+    margin-left: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    color: #ffffff;
+}
+
+.content-table {
+    border-collapse: collapse;
+    font-size: 16px;
+    border-radius: 5px 5px 0 0;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    transition: all 0.5s;
+    width: 900px;
+    margin-left: 350px;
+    margin-top: 10px;
+}
+
+.content-table thead tr {
+    background-color: #1aa0e8;
+    color: #ffffff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.content-table th,
+.content-table td {
+    padding: 12px 25px;
+}
+
+.content-table tbody tr .aksi {
+    display: flex;
+}
+
+.content-table tbody tr {
+    border-bottom: 1px solid #ffffff;
+    text-align: center;
+    font-size: 14px;
+}
+
+.content-table tbody tr:nth-of-type(even) {
+    background-color: #f3f3f3;
+}
+
+.content-table tbody tr:last-of-type {
+    border-bottom: 2px solid #1aa0e8;
+}
+
+.content-table tbody .update,
+.content-table tbody .hapus {
+    border: none;
+    outline: none;
+    padding: 10px 15px 10px 15px;
+    font-size: 15px;
+    cursor: pointer;
+    border-radius: 5px;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.content-table tbody .update {
+    background-color: #fa7d09;
+}
+
+.content-table tbody .update:hover {
+    box-shadow: 0px 1px 10px #fa7d09;
+}
+
+.content-table tbody .hapus {
+    background-color: #ec0101;
+    margin-left: 5px;
+}
+
+.content-table tbody .hapus:hover {
+    box-shadow: 0px 1px 10px #ec0101;
+}
